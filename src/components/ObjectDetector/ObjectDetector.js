@@ -82,8 +82,10 @@ export function ObjectDetector() {
                 {imageData && <img alt = "img" className = "targetImg" src={imageData}/>}
             </div>
             <input className="hidden" type="file" ref={fileInputRef} onChange={onSelectImage} />
-            <button onClick={openFilePicker}>Select Image</button>
-            <Link to={{ pathname: "/definition", state: { chinese: translation.chinese, english: translation.english }}}>Breakdown!!!!</Link>
+            <div className="row">
+                <button onClick={openFilePicker} className="btn blue">Select Image</button>
+                <Link className="btn blue" to={{ pathname: "/definition", state: { chinese: translation.chinese, english: translation.english }}}>Breakdown!!!!</Link>
+            </div>
         </div>
     )
 }

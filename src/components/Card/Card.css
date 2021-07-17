@@ -1,4 +1,4 @@
-.card {
+.flashcard {
     height: 25rem;
     width: 300px;
     display: inline-block;
@@ -12,10 +12,11 @@
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
+    color: white;
     
   }
-
-  .card .front {
+  
+  .front {
     height: 25rem;
     width: 300px;
     backface-visibility: hidden;
@@ -25,7 +26,6 @@
     position: absolute;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     
   }
@@ -36,12 +36,11 @@
 
   }
   
-  .card .back {
+  .back {
     transform: rotateY(180deg);
     height: 25rem;
     width: 300px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -50,13 +49,11 @@
   }
   
   .english{
-    color: #333;
     font-size: 2.3rem;
     padding-top: 55%;
   }
   
   .hanzi{
-    color: #333;
     font-size: 6.3em;
     padding-top: 30%;
   }

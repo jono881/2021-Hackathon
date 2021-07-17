@@ -10,6 +10,7 @@ import catSound from '../../sounds/cat.m4a';
 import doorSound from '../../sounds/door.m4a';
 import umbrellaSound from '../../sounds/umbrella.m4a';
 import './Definition.css';
+import Header from '../../components/Header/Header';
 
 export default function Definition(props) {
     const saveToStorage = () => {
@@ -37,24 +38,29 @@ export default function Definition(props) {
     }
     return (
         <div>
-            <h1>{props.location.state.chinese}</h1>
-            <div className="picture">
-                <h2>English: {props.location.state.english}</h2>
-                {
-                    props.location.state.english === "dog" ? 
-                        <div><h2>Pinyin: gǒu</h2><img src={dogImage} alt="img"/></div>:
-                    props.location.state.english === "book" ?
-                         <div><h2>Pinyin: Shū</h2><img src={bookImage} alt="img"/></div> :
-                    props.location.state.english === "cat" ?
-                        <div><h2>Pinyin: Māo</h2><img src={catImage} alt="img"/></div> :
-                    props.location.state.english === "door" ?
-                        <div><h2>Pinyin: Mén</h2><img src={doorImage} alt="img"/></div> :
-                    props.location.state.english === "umbrella" ?
-                        <div><h2>Pinyin: Sǎn</h2><img src={umbrellaImage} alt="img"/></div> : ""
-                }
+            <Header header="Breakdown"/>
+            <div className="main-container">
+                <h1>{props.location.state.chinese}</h1>
+                <div className="picture">
+                    <h2>English: {props.location.state.english}</h2>
+                    {
+                        props.location.state.english === "dog" ? 
+                            <div><h2>Pinyin: gǒu</h2><img src={dogImage} alt="img"/></div>:
+                        props.location.state.english === "book" ?
+                            <div><h2>Pinyin: Shū</h2><img src={bookImage} alt="img"/></div> :
+                        props.location.state.english === "cat" ?
+                            <div><h2>Pinyin: Māo</h2><img src={catImage} alt="img"/></div> :
+                        props.location.state.english === "door" ?
+                            <div><h2>Pinyin: Mén</h2><img src={doorImage} alt="img"/></div> :
+                        props.location.state.english === "umbrella" ?
+                            <div><h2>Pinyin: Sǎn</h2><img src={umbrellaImage} alt="img"/></div> : ""
+                    }
+                </div>
+                <div className="row">
+                    <button onClick={saveToStorage} className="btn blue">Save</button>
+                    <button onClick={playSound} className="btn blue">Play Sound</button>
+                </div>
             </div>
-            <button onClick={saveToStorage}>Save as Flash Card</button>
-            <button onClick={playSound}>Play Sound</button>
         </div>
     );
 }
