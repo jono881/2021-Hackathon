@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export function ObjectDetector() {
     const fileInputRef = useRef();
     const [imageData, setImageData] = useState(null);
-    const [translation, setTranslation ] = useState({});
+    const [translation, setTranslation ] = useState({chinese: '书', english: 'book'});
 
     const openFilePicker = () => {
         if (fileInputRef.current) {
@@ -43,7 +43,7 @@ export function ObjectDetector() {
         const model = await cocoSsd.load({});
         const predictions = await model.detect(imageElement, 2);
         console.log("Predictions: ", predictions[0].class);
-        translateObjectName(predictions[0].class);
+        //translateObjectName(predictions[0].class);
     }
 
     const translateObjectName = async(word) => {
