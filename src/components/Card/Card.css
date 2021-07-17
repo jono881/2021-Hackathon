@@ -1,0 +1,59 @@
+.flashcard {
+    height: 25rem;
+    width: 300px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 150px;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    color: white;
+    
+  }
+  
+  .front {
+    height: 25rem;
+    width: 300px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px;
+    
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+    transition: all 0.4s ease-in-out;
+
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    height: 25rem;
+    width: 300px;
+    text-align: center;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
+  
+  .english{
+    font-size: 2.3rem;
+    padding-top: 55%;
+  }
+  
+  .hanzi{
+    font-size: 6.3em;
+    padding-top: 30%;
+  }
