@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export function ObjectDetector() {
     const fileInputRef = useRef();
     const [imageData, setImageData] = useState(null);
-    const [translation, setTranslation ] = useState();
+    const [translation, setTranslation ] = useState({});
 
     const openFilePicker = () => {
         if (fileInputRef.current) {
