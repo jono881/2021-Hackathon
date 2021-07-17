@@ -9,13 +9,7 @@ import { Link } from 'react-router-dom';
 export function ObjectDetector() {
     const fileInputRef = useRef();
     const [imageData, setImageData] = useState(null);
-    
-    const dummyData = {
-        chinese: "狗",
-        english: "dog"
-    }
-    
-    const [translation, setTranslation ] = useState(dummyData);
+    const [translation, setTranslation ] = useState({});
 
     const openFilePicker = () => {
         if (fileInputRef.current) {
@@ -49,7 +43,13 @@ export function ObjectDetector() {
         const model = await cocoSsd.load({});
         const predictions = await model.detect(imageElement, 2);
         console.log("Predictions: ", predictions[0].class);
-        translateObjectName(predictions[0].class);
+        if (!isStoredInSession()) {
+            translateObjectName(predictions[0].class);
+        }
+    }
+
+    const isStoredInSession = () => {
+        return (window.sessionStorage.getItem("translation") != null);
     }
 
     const translateObjectName = async(word) => {
@@ -76,6 +76,7 @@ export function ObjectDetector() {
                 english: word,
                 chinese: response.data[0].translations[0].text
             });
+            window.sessionStorage.setItem("translation", {english: word, chinese: response.data[0].translations[0].text});
             console.log(JSON.stringify(response.data[0], null, 4));
         });
     }
