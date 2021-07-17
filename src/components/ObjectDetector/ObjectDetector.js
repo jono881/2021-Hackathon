@@ -80,6 +80,7 @@ export function ObjectDetector() {
         });
     }
 
+    // html code
     return (
         <div className="main-container">
             <h1>Chinese: {translation.chinese != null ? translation.chinese : ""}</h1>
