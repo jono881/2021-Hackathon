@@ -5,7 +5,7 @@ import './FlashCardList.css'
 
 export default function FlashCardList() {
     const [flashCards, setFlashCards] = useState([]);
-    const colours = ["FFBE0B", "#FF006E", "#34495e", "#8e44ad", "#2c3e50", "#27ae60", "FFBE0B", "#16a085"];
+    const colours = ["FFBE0B", "#FF006E", "#34495e", "#8e44ad", "#2c3e50", "#27ae60", "#f39c12", "#16a085"];
     function getKeyByValue(object, value) {
         return Object.keys(object).find(key => object[key] === value);
     }

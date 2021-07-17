@@ -8,6 +8,7 @@ import Definition from './pages/Definition/Definition';
 import FlashCard from './pages/FlashCard/FlashCard';
 import FlashCardList from './pages/FlashcardList/FlashCards';
 import Intro from './pages/Intro/Intro';
+import Search from './pages/Search/Search';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
                 <Route path="/flashcards" component={FlashCardList}/>
                 <Route path="/card" component={FlashCard}/>
                 <Route path="/definition" component={Definition}/>
-              <Navigation />
+                <Route path="/search" component={Search}/>
+                <Navigation />
               </div>
            </Switch>
     </BrowserRouter>
