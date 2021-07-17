@@ -4,11 +4,18 @@ import "@tensorflow/tfjs-backend-webgl";
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import './objectDetector.css'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export function ObjectDetector() {
     const fileInputRef = useRef();
     const [imageData, setImageData] = useState(null);
-    const [translation, setTranslation ] = useState({});
+    
+    const dummyData = {
+        chinese: "狗",
+        english: "dog"
+    }
+    
+    const [translation, setTranslation ] = useState(dummyData);
 
     const openFilePicker = () => {
         if (fileInputRef.current) {
@@ -81,6 +88,7 @@ export function ObjectDetector() {
             </div>
             <input className="hidden" type="file" ref={fileInputRef} onChange={onSelectImage} />
             <button onClick={openFilePicker}>Select Image</button>
+            <Link to={{ pathname: "/definition", state: { chinese: translation.chinese, english: translation.english }}}>Breakdown!!!!</Link>
         </div>
     )
 }
