@@ -52,7 +52,7 @@ export function ObjectDetector() {
             url: '/translate',
             method: 'post',
             headers: {
-                'Ocp-Apim-Subscription-Key': '4b4a066737eb4313a4cfbfc633794085',
+                'Ocp-Apim-Subscription-Key': '',    //  I got rid of this
                 'Ocp-Apim-Subscription-Region': 'eastus',
                 'Content-type': 'application/json',
             },
