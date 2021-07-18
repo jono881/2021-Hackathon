@@ -77,7 +77,7 @@ export function ObjectDetector() {
     // html code
     return (
         <div className="main-container">
-            <h1>Chinese: {translation.chinese != null ? translation.chinese : ""}</h1>
+            <h1>🇨🇳 Mandarin: {translation.chinese != null ? translation.chinese : ""}</h1>
             <div className="detector-container">
                 {imageData && <img alt = "img" className = "targetImg" src={imageData}/>}
             </div>
