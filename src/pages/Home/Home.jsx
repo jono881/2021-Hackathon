@@ -7,6 +7,7 @@ export default function Home() {
         <div>
             <Header header="Home"/>
             <h1 className="title-centre-align">World's First Mandarin Language Learning App for Dyslexia</h1>
+            <p className="title-left-align">Image Detection</p>
         </div>
     )
 }
