@@ -2,7 +2,24 @@
     text-align: center;
 }
 
-.title-left-align{
+.text-left{
+    margin: auto;
+    width: 40%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+
+
+
+
+.image-left{
+    margin: left;
+    width: 60%;
+    padding: 10px;
+}
+
+.text-right{
     margin: auto;
     width: 40%;
     /* border: 3px solid green; */
