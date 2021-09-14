@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header';
 import './Home.css';
-import {FaCamera, FaBook, FaSearch} from 'react-icons/fa';
+// import {FaCamera, FaBook, FaSearch} from 'react-icons/fa';
 
 
 export default function Home() {
